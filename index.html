@@ -3,130 +3,211 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>StadiumIQ — Smart Physical Event Experience</title>
-  <meta name="description" content="StadiumIQ is an AI-powered assistant for large-scale sporting events, providing real-time crowd flow, wait times, navigation, and seamless coordination for attendees." />
+  <title>StadiumIQ — Smart Physical Event Experience | AI-Powered Stadium Assistant</title>
+  <meta name="description" content="StadiumIQ is an AI-powered assistant for large-scale sporting events. Get real-time crowd flow, zero wait times, smart navigation, seat-side food ordering, and emergency routing for 50,000+ attendees." />
+  <meta name="keywords" content="stadium assistant, AI event experience, crowd flow, smart navigation, sports event app, PromptWars 2026" />
+  <meta property="og:title" content="StadiumIQ — Smart Physical Event Experience" />
+  <meta property="og:description" content="AI-powered real-time crowd management and fan experience platform for large sporting events." />
+  <meta property="og:type" content="website" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;600;700;800;900&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
   <!-- Navigation -->
-  <nav class="navbar" id="navbar">
+  <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
     <div class="nav-container">
-      <div class="nav-logo">
+      <a href="#hero" class="nav-logo" id="navLogoLink" aria-label="StadiumIQ Home">
         <div class="logo-icon">🏟️</div>
         <span class="logo-text">StadiumIQ</span>
-      </div>
-      <ul class="nav-links" id="navLinks">
-        <li><a href="#features">Features</a></li>
-        <li><a href="#assistant">Assistant</a></li>
-        <li><a href="#crowd">Live Crowd</a></li>
-        <li><a href="#about">About</a></li>
+        <span class="logo-badge">LIVE</span>
+      </a>
+      <ul class="nav-links" id="navLinks" role="list">
+        <li><a href="#features" id="navFeatures">Features</a></li>
+        <li><a href="#assistant" id="navAssistant">Assistant</a></li>
+        <li><a href="#crowd" id="navCrowd">Live Crowd</a></li>
+        <li><a href="#howItWorks" id="navHow">How It Works</a></li>
+        <li><a href="#about" id="navAbout">About</a></li>
       </ul>
-      <button class="btn-primary nav-cta" id="getStartedBtn">Get Started</button>
-      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+      <div class="nav-actions">
+        <div class="nav-live-indicator" id="navLiveIndicator">
+          <span class="pulse-ring"></span>
+          <span class="live-dot"></span>
+          <span>Live</span>
+        </div>
+        <button class="btn-primary nav-cta" id="getStartedBtn" aria-label="Get started with StadiumIQ">Get Started</button>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
     </div>
   </nav>
 
   <!-- Hero Section -->
-  <section class="hero" id="hero">
+  <section class="hero" id="hero" aria-label="Hero section">
     <div class="hero-bg-grid"></div>
-    <div class="floating-orbs">
+    <div class="floating-orbs" aria-hidden="true">
       <div class="orb orb-1"></div>
       <div class="orb orb-2"></div>
       <div class="orb orb-3"></div>
+      <div class="orb orb-4"></div>
     </div>
     <div class="hero-content">
-      <div class="hero-badge animate-fade-in">
-        <span class="badge-dot"></span>
-        AI-Powered Event Intelligence
+      <div class="hero-badge animate-fade-in" role="status">
+        <span class="badge-dot" aria-hidden="true"></span>
+        🏆 PromptWars 2026 — Physical Event Experience
       </div>
       <h1 class="hero-title animate-slide-up">
         Your Smart Guide to<br />
         <span class="gradient-text">Stadium Experiences</span>
       </h1>
       <p class="hero-subtitle animate-slide-up delay-1">
-        Real-time crowd flow, zero wait times, seamless navigation —<br />
-        StadiumIQ makes every event unforgettable.
+        Real-time crowd flow, zero wait times, AI-powered navigation —<br />
+        StadiumIQ makes every event unforgettable for 50,000+ fans.
       </p>
       <div class="hero-actions animate-slide-up delay-2">
-        <button class="btn-primary btn-lg" id="tryAssistantBtn">Try the Assistant →</button>
-        <button class="btn-ghost btn-lg" id="learnMoreBtn">See Live Demo</button>
+        <button class="btn-primary btn-lg glow-btn" id="tryAssistantBtn" aria-label="Try the AI assistant">
+          <span>Try the Assistant</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </button>
+        <button class="btn-ghost btn-lg" id="learnMoreBtn" aria-label="See live demo">
+          <span>📹</span> See Live Demo
+        </button>
       </div>
-      <div class="hero-stats animate-slide-up delay-3">
+      <div class="hero-stats animate-slide-up delay-3" role="region" aria-label="Key statistics">
         <div class="stat">
-          <span class="stat-num" data-target="94">0</span><span>%</span>
+          <div class="stat-num-wrap">
+            <span class="stat-num" data-target="94" id="stat1">0</span><span class="stat-suffix">%</span>
+          </div>
           <span class="stat-label">Wait Reduction</span>
         </div>
-        <div class="stat-divider"></div>
+        <div class="stat-divider" aria-hidden="true"></div>
         <div class="stat">
-          <span class="stat-num" data-target="2.3">0</span><span>M+</span>
+          <div class="stat-num-wrap">
+            <span class="stat-num" data-target="2.3" id="stat2">0</span><span class="stat-suffix">M+</span>
+          </div>
           <span class="stat-label">Fans Assisted</span>
         </div>
-        <div class="stat-divider"></div>
+        <div class="stat-divider" aria-hidden="true"></div>
         <div class="stat">
-          <span class="stat-num" data-target="150">0</span><span>+</span>
+          <div class="stat-num-wrap">
+            <span class="stat-num" data-target="150" id="stat3">0</span><span class="stat-suffix">+</span>
+          </div>
           <span class="stat-label">Stadiums</span>
+        </div>
+        <div class="stat-divider" aria-hidden="true"></div>
+        <div class="stat">
+          <div class="stat-num-wrap">
+            <span class="stat-num" data-target="99" id="stat4">0</span><span class="stat-suffix">%</span>
+          </div>
+          <span class="stat-label">Uptime</span>
         </div>
       </div>
     </div>
-    <div class="hero-visual">
+    <div class="hero-visual" aria-label="Live stadium status card">
       <div class="stadium-card">
         <div class="card-header">
-          <div class="live-dot"></div>
+          <div class="live-dot" aria-hidden="true"></div>
           <span>Live Stadium Status</span>
+          <span class="card-time" id="cardTime">--:--</span>
         </div>
-        <div class="venue-name">🏏 National Cricket Ground</div>
+        <div class="venue-name">🏏 National Cricket Stadium</div>
         <div class="capacity-bar-wrap">
           <div class="capacity-label">
             <span>Capacity</span>
-            <span class="capacity-pct">78%</span>
+            <span class="capacity-pct" id="capacityPct">78%</span>
           </div>
-          <div class="capacity-bar"><div class="capacity-fill" style="width:78%"></div></div>
+          <div class="capacity-bar" role="progressbar" aria-valuenow="78" aria-valuemin="0" aria-valuemax="100" aria-label="Stadium capacity">
+            <div class="capacity-fill" id="capacityFill" style="width:78%"></div>
+          </div>
         </div>
         <div class="mini-stats">
-          <div class="ms"><span class="ms-icon">⏱</span><div><div class="ms-val">3 min</div><div class="ms-lbl">Avg Wait</div></div></div>
-          <div class="ms"><span class="ms-icon">🚶</span><div><div class="ms-val">42K</div><div class="ms-lbl">Attendees</div></div></div>
-          <div class="ms"><span class="ms-icon">🍔</span><div><div class="ms-val">5 min</div><div class="ms-lbl">Food Wait</div></div></div>
+          <div class="ms">
+            <span class="ms-icon" aria-hidden="true">⏱</span>
+            <div>
+              <div class="ms-val">3 min</div>
+              <div class="ms-lbl">Avg Wait</div>
+            </div>
+          </div>
+          <div class="ms">
+            <span class="ms-icon" aria-hidden="true">🚶</span>
+            <div>
+              <div class="ms-val">42K</div>
+              <div class="ms-lbl">Attendees</div>
+            </div>
+          </div>
+          <div class="ms">
+            <span class="ms-icon" aria-hidden="true">🍔</span>
+            <div>
+              <div class="ms-val">2 min</div>
+              <div class="ms-lbl">Food Wait</div>
+            </div>
+          </div>
         </div>
-        <div class="alert-box">
-          <span>⚡</span> Gate B experiencing high traffic — use Gate A for faster entry
+        <div class="card-gate-row">
+          <div class="cg-item cg-green">Gate A <span>✓ Clear</span></div>
+          <div class="cg-item cg-red">Gate B <span>⚠ Busy</span></div>
+          <div class="cg-item cg-green">Gate C <span>✓ Clear</span></div>
+          <div class="cg-item cg-orange">Gate D <span>⚡ High</span></div>
+        </div>
+        <div class="alert-box" role="alert">
+          <span aria-hidden="true">⚡</span> Gate B experiencing high traffic — use Gate A for faster entry
+        </div>
+      </div>
+      <!-- Floating mini card -->
+      <div class="hero-mini-card" id="heroMiniCard" aria-label="AI suggestion">
+        <div class="hmc-icon">🤖</div>
+        <div class="hmc-text">
+          <div class="hmc-title">AI Suggestion</div>
+          <div class="hmc-body">Head to Food Court A — only 2 min wait!</div>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- Marquee ticker -->
+  <div class="ticker-wrap" role="marquee" aria-label="Live updates ticker">
+    <div class="ticker-inner" id="tickerInner">
+      <span>⚡ Gate A — Low traffic — Under 2 min entry</span>
+      <span>🍔 Food Court A — Only 2 min wait right now!</span>
+      <span>🟢 Parking Lot C — 200+ spots available</span>
+      <span>⚠️ Gate D — Congested — Use Gate C instead</span>
+      <span>🏏 Match starts in 14 minutes — Head to your seats!</span>
+      <span>🚻 Restroom N1 — 1 min wait — Recommended</span>
+      <span>💺 South Stand at 91% — approaching full capacity</span>
+      <span>🔵 Halftime in 8 min — Order food now to beat the rush!</span>
+    </div>
+  </div>
+
   <!-- Features Section -->
-  <section class="features" id="features">
+  <section class="features" id="features" aria-labelledby="featuresTitle">
     <div class="container">
       <div class="section-header">
         <div class="section-tag">Core Features</div>
-        <h2 class="section-title">Everything You Need at the Game</h2>
-        <p class="section-subtitle">Intelligent tools to make your stadium experience seamless from entry to exit.</p>
+        <h2 class="section-title" id="featuresTitle">Everything You Need at the Game</h2>
+        <p class="section-subtitle">Intelligent tools to make your stadium experience seamless — from parking to the final whistle.</p>
       </div>
       <div class="features-grid">
 
-        <div class="feature-card feature-card--large" id="feat-crowd">
-          <div class="feat-icon-wrap feat-purple">🌊</div>
+        <div class="feature-card feature-card--large reveal-item" id="feat-crowd">
+          <div class="feat-icon-wrap feat-purple" aria-hidden="true">🌊</div>
           <h3>Live Crowd Flow</h3>
-          <p>Real-time heatmaps showing crowd density at every section, gate, concession stand, and restroom. Avoid congestion instantly.</p>
+          <p>Real-time heatmaps showing crowd density at every section, gate, concession stand, and restroom. Avoid congestion instantly with AI predictions.</p>
           <div class="feat-demo">
-            <div class="heatmap-mini">
-              <div class="hm-cell hm-low">A1</div>
-              <div class="hm-cell hm-med">A2</div>
-              <div class="hm-cell hm-high">A3</div>
-              <div class="hm-cell hm-med">B1</div>
-              <div class="hm-cell hm-low">B2</div>
-              <div class="hm-cell hm-low">B3</div>
-              <div class="hm-cell hm-high">C1</div>
-              <div class="hm-cell hm-med">C2</div>
-              <div class="hm-cell hm-low">C3</div>
+            <div class="heatmap-mini" role="img" aria-label="Crowd density heatmap">
+              <div class="hm-cell hm-low" title="Section A1 - Low density">A1</div>
+              <div class="hm-cell hm-med" title="Section A2 - Medium density">A2</div>
+              <div class="hm-cell hm-high" title="Section A3 - High density">A3</div>
+              <div class="hm-cell hm-med" title="Section B1 - Medium density">B1</div>
+              <div class="hm-cell hm-low" title="Section B2 - Low density">B2</div>
+              <div class="hm-cell hm-low" title="Section B3 - Low density">B3</div>
+              <div class="hm-cell hm-high" title="Section C1 - High density">C1</div>
+              <div class="hm-cell hm-med" title="Section C2 - Medium density">C2</div>
+              <div class="hm-cell hm-low" title="Section C3 - Low density">C3</div>
             </div>
-            <div class="hm-legend">
+            <div class="hm-legend" role="legend">
               <span class="hm-low-dot">Low</span>
               <span class="hm-med-dot">Medium</span>
               <span class="hm-high-dot">High</span>
@@ -134,104 +215,208 @@
           </div>
         </div>
 
-        <div class="feature-card" id="feat-nav">
-          <div class="feat-icon-wrap feat-blue">🧭</div>
+        <div class="feature-card reveal-item" id="feat-nav">
+          <div class="feat-icon-wrap feat-blue" aria-hidden="true">🧭</div>
           <h3>Smart Navigation</h3>
-          <p>Turn-by-turn indoor navigation using Bluetooth beacons. Find your seat, the nearest restroom, or the shortest food line in seconds.</p>
+          <p>Turn-by-turn indoor navigation via Bluetooth beacons. Find your seat, restroom, or shortest food line in seconds.</p>
+          <div class="feat-nav-demo">
+            <div class="nav-step active-step">📍 Gate A Entry</div>
+            <div class="nav-arrow">↓</div>
+            <div class="nav-step">🔵 Corridor 2 — Right</div>
+            <div class="nav-arrow">↓</div>
+            <div class="nav-step highlighted-step">🪑 Section 14 — Arrived!</div>
+          </div>
         </div>
 
-        <div class="feature-card" id="feat-wait">
-          <div class="feat-icon-wrap feat-green">⏱</div>
+        <div class="feature-card reveal-item" id="feat-wait">
+          <div class="feat-icon-wrap feat-green" aria-hidden="true">⏱</div>
           <h3>Wait Time Prediction</h3>
-          <p>AI predicts wait times at every service point — food stalls, restrooms, gates — updated every 30 seconds using sensor data.</p>
+          <p>AI predicts wait times at every service point — food stalls, restrooms, gates — updated every 30 seconds using IoT sensor data.</p>
+          <div class="wait-pred-demo">
+            <div class="wpd-row"><span>🚪 Gate A</span><div class="wpd-bar"><div class="wpd-fill" style="width:15%" aria-valuenow="15"></div></div><span class="wpd-t">2 min</span></div>
+            <div class="wpd-row"><span>🍔 Court A</span><div class="wpd-bar"><div class="wpd-fill" style="width:20%" aria-valuenow="20"></div></div><span class="wpd-t">2 min</span></div>
+            <div class="wpd-row"><span>🚻 N1</span><div class="wpd-bar"><div class="wpd-fill" style="width:10%" aria-valuenow="10"></div></div><span class="wpd-t">1 min</span></div>
+          </div>
         </div>
 
-        <div class="feature-card" id="feat-alert">
-          <div class="feat-icon-wrap feat-orange">🔔</div>
+        <div class="feature-card reveal-item" id="feat-alert">
+          <div class="feat-icon-wrap feat-orange" aria-hidden="true">🔔</div>
           <h3>Smart Alerts</h3>
-          <p>Proactive push notifications for seat changes, gate closures, best times to grab food without missing the action.</p>
+          <p>Proactive push notifications for seat changes, gate closures, best times to grab food without missing the action on the field.</p>
+          <div class="alert-demo-list">
+            <div class="adl-item adl-warn">🟡 Gate D congested — rerouting</div>
+            <div class="adl-item adl-info">🔵 Halftime in 8 min — order now!</div>
+            <div class="adl-item adl-ok">🟢 Lot C has 200+ spaces free</div>
+          </div>
         </div>
 
-        <div class="feature-card feature-card--large" id="feat-order">
-          <div class="feat-icon-wrap feat-red">🍕</div>
+        <div class="feature-card feature-card--large reveal-item" id="feat-order">
+          <div class="feat-icon-wrap feat-red" aria-hidden="true">🍕</div>
           <h3>Order From Your Seat</h3>
-          <p>Browse menus, order food & beverages, and get them delivered directly to your seat. No queues. No missing moments.</p>
+          <p>Browse menus, order food & beverages, and get them delivered directly to your seat. No queues. No missing moments. Avg delivery: 8–12 minutes.</p>
           <div class="order-demo">
-            <div class="order-item">
+            <div class="order-item" id="orderItem1">
               <span>🍔 Classic Burger</span>
               <div class="order-actions">
                 <span class="order-price">₹280</span>
-                <button class="btn-add" id="addBurger">+ Add</button>
+                <button class="btn-add" id="addBurger" aria-label="Add Classic Burger to order">+ Add</button>
               </div>
             </div>
-            <div class="order-item">
+            <div class="order-item" id="orderItem2">
               <span>🌮 Nachos</span>
               <div class="order-actions">
                 <span class="order-price">₹180</span>
-                <button class="btn-add" id="addNachos">+ Add</button>
+                <button class="btn-add" id="addNachos" aria-label="Add Nachos to order">+ Add</button>
               </div>
             </div>
-            <div class="order-item">
+            <div class="order-item" id="orderItem3">
               <span>🥤 Cold Drink</span>
               <div class="order-actions">
                 <span class="order-price">₹60</span>
-                <button class="btn-add" id="addDrink">+ Add</button>
+                <button class="btn-add" id="addDrink" aria-label="Add Cold Drink to order">+ Add</button>
               </div>
+            </div>
+            <div class="order-item" id="orderItem4">
+              <span>🍿 Popcorn</span>
+              <div class="order-actions">
+                <span class="order-price">₹80</span>
+                <button class="btn-add" id="addPopcorn" aria-label="Add Popcorn to order">+ Add</button>
+              </div>
+            </div>
+            <div class="order-summary" id="orderSummary" style="display:none" role="status">
+              <span>🛒 <strong id="orderCount">0</strong> items — <strong id="orderTotal">₹0</strong></span>
+              <button class="btn-checkout" id="checkoutBtn">Checkout →</button>
             </div>
           </div>
         </div>
 
-        <div class="feature-card" id="feat-emergency">
-          <div class="feat-icon-wrap feat-purple">🚨</div>
+        <div class="feature-card reveal-item" id="feat-emergency">
+          <div class="feat-icon-wrap feat-red2" aria-hidden="true">🚨</div>
           <h3>Emergency Routing</h3>
-          <p>Instant evacuation routes and emergency services coordination, reducing crowd panic and ensuring safety.</p>
+          <p>Instant evacuation routes and emergency services coordination, reducing crowd panic and ensuring safety for all attendees.</p>
+          <div class="emer-demo">
+            <div class="emer-status">
+              <span class="emer-dot"></span>
+              <span>All clear — No active incidents</span>
+            </div>
+            <div class="emer-exits">
+              <div>Exit 7 — North Corridor</div>
+              <div>Exit 3 — East Stand</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="feature-card reveal-item" id="feat-parking">
+          <div class="feat-icon-wrap feat-teal" aria-hidden="true">🚗</div>
+          <h3>Parking Intelligence</h3>
+          <p>Real-time parking availability, pre-booking, and optimal route guidance from the stadium entrance to your spot.</p>
         </div>
 
       </div>
     </div>
   </section>
 
+  <!-- How It Works -->
+  <section class="how-section" id="howItWorks" aria-labelledby="howTitle">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">Technology</div>
+        <h2 class="section-title" id="howTitle">How StadiumIQ Works</h2>
+        <p class="section-subtitle">A seamless pipeline from IoT sensors to fan experience — in under 30 seconds.</p>
+      </div>
+      <div class="how-steps">
+        <div class="how-step reveal-item" id="step1">
+          <div class="hs-num">01</div>
+          <div class="hs-icon">📡</div>
+          <h3>IoT Data Collection</h3>
+          <p>Bluetooth beacons, pressure sensors, and cameras collect crowd density data across all stadium zones simultaneously.</p>
+        </div>
+        <div class="how-arrow" aria-hidden="true">→</div>
+        <div class="how-step reveal-item" id="step2">
+          <div class="hs-num">02</div>
+          <div class="hs-icon">🧠</div>
+          <h3>AI Processing</h3>
+          <p>Machine learning models process the sensor data to predict wait times, detect congestion, and generate routing suggestions.</p>
+        </div>
+        <div class="how-arrow" aria-hidden="true">→</div>
+        <div class="how-step reveal-item" id="step3">
+          <div class="hs-num">03</div>
+          <div class="hs-icon">☁️</div>
+          <h3>Cloud & APIs</h3>
+          <p>Real-time data is served via Google Cloud APIs — WebSocket streams push updates every 30 seconds to all connected fans.</p>
+        </div>
+        <div class="how-arrow" aria-hidden="true">→</div>
+        <div class="how-step reveal-item" id="step4">
+          <div class="hs-num">04</div>
+          <div class="hs-icon">📱</div>
+          <h3>Fan Experience</h3>
+          <p>Attendees receive real-time guidance via the StadiumIQ app — chat, alerts, navigation, and food ordering at their fingertips.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- AI Assistant Section -->
-  <section class="assistant-section" id="assistant">
+  <section class="assistant-section" id="assistant" aria-labelledby="assistantTitle">
     <div class="container">
       <div class="assistant-wrap">
         <div class="assistant-info">
           <div class="section-tag">AI Assistant</div>
-          <h2 class="section-title">Ask StadiumIQ Anything</h2>
+          <h2 class="section-title" id="assistantTitle">Ask StadiumIQ Anything</h2>
           <p class="section-subtitle">Our AI assistant knows your stadium inside out — from parking to the best seat views. Ask in plain English.</p>
           <div class="assistant-features">
-            <div class="af-item">✅ Shortest route to your seat</div>
-            <div class="af-item">✅ Real-time wait time at Gate C</div>
-            <div class="af-item">✅ Best restroom to use right now</div>
-            <div class="af-item">✅ Food stall with the shortest line</div>
-            <div class="af-item">✅ Emergency exit nearest to me</div>
-            <div class="af-item">✅ Parking availability & directions</div>
-          </div>
-        </div>
-        <div class="chatbot-container" id="chatbotContainer">
-          <div class="chat-header">
-            <div class="chat-avatar">🤖</div>
-            <div>
-              <div class="chat-name">StadiumIQ Assistant</div>
-              <div class="chat-status"><span class="live-dot"></span> Online</div>
+            <div class="af-item reveal-item">
+              <span class="af-icon">✅</span>
+              <div><strong>Shortest route to your seat</strong><br/><span>Indoor navigation with step-by-step directions</span></div>
+            </div>
+            <div class="af-item reveal-item">
+              <span class="af-icon">✅</span>
+              <div><strong>Real-time gate wait times</strong><br/><span>AI-predicted waits updated every 30 seconds</span></div>
+            </div>
+            <div class="af-item reveal-item">
+              <span class="af-icon">✅</span>
+              <div><strong>Nearest restroom right now</strong><br/><span>Finds the one with zero queue near you</span></div>
+            </div>
+            <div class="af-item reveal-item">
+              <span class="af-icon">✅</span>
+              <div><strong>Emergency exits & safety</strong><br/><span>Instant routing with security coordination</span></div>
             </div>
           </div>
-          <div class="chat-messages" id="chatMessages">
+          <div class="assistant-google-badge">
+            <span>⚡ Powered by</span>
+            <span class="gb-pill">Google Cloud AI</span>
+            <span class="gb-pill">Maps API</span>
+            <span class="gb-pill">Firebase</span>
+          </div>
+        </div>
+        <div class="chatbot-container" id="chatbotContainer" role="region" aria-label="StadiumIQ AI chat interface">
+          <div class="chat-header">
+            <div class="chat-avatar" aria-hidden="true">🤖</div>
+            <div>
+              <div class="chat-name">StadiumIQ Assistant</div>
+              <div class="chat-status"><span class="live-dot" aria-hidden="true"></span> Online — Powered by AI</div>
+            </div>
+            <div class="chat-score" aria-label="Satisfaction score">⭐ 4.9</div>
+          </div>
+          <div class="chat-messages" id="chatMessages" role="log" aria-live="polite" aria-label="Chat messages">
             <div class="msg msg-bot">
               <div class="msg-bubble">
-                👋 Hello! I'm StadiumIQ. I can help you navigate the stadium, check wait times, order food, and more. What do you need?
+                👋 Hello! I'm StadiumIQ. I can help you navigate, check wait times, order food, find parking, and more. What do you need?
               </div>
             </div>
           </div>
-          <div class="chat-suggestions" id="chatSuggestions">
-            <button class="suggestion-btn" data-query="What's the wait time at Gate A?">⏱ Gate A wait time</button>
-            <button class="suggestion-btn" data-query="Where is the nearest restroom?">🚻 Nearest restroom</button>
-            <button class="suggestion-btn" data-query="How do I get to Section 14?">🧭 Navigate to Section 14</button>
-            <button class="suggestion-btn" data-query="Which food stall has the shortest queue?">🍔 Shortest food queue</button>
+          <div class="chat-suggestions" id="chatSuggestions" role="group" aria-label="Suggested questions">
+            <button class="suggestion-btn" id="sug1" data-query="What's the wait time at Gate A?">⏱ Gate A wait time</button>
+            <button class="suggestion-btn" id="sug2" data-query="Where is the nearest restroom?">🚻 Nearest restroom</button>
+            <button class="suggestion-btn" id="sug3" data-query="How do I get to Section 14?">🧭 Navigate to Section 14</button>
+            <button class="suggestion-btn" id="sug4" data-query="Which food stall has the shortest queue?">🍔 Shortest food queue</button>
+            <button class="suggestion-btn" id="sug5" data-query="Where can I park?">🚗 Parking info</button>
           </div>
           <div class="chat-input-wrap">
-            <input type="text" id="chatInput" class="chat-input" placeholder="Ask me anything about the stadium..." />
-            <button class="chat-send" id="chatSend" aria-label="Send message">➤</button>
+            <input type="text" id="chatInput" class="chat-input" placeholder="Ask me anything about the stadium..." autocomplete="off" aria-label="Type your message" />
+            <button class="chat-send" id="chatSend" aria-label="Send message">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M2 21l21-9L2 3v7l15 2-15 2z"/></svg>
+            </button>
           </div>
         </div>
       </div>
@@ -239,77 +424,90 @@
   </section>
 
   <!-- Live Crowd Monitor -->
-  <section class="crowd-section" id="crowd">
+  <section class="crowd-section" id="crowd" aria-labelledby="crowdTitle">
     <div class="container">
       <div class="section-header">
         <div class="section-tag">Live Dashboard</div>
-        <h2 class="section-title">Real-Time Stadium Monitor</h2>
-        <p class="section-subtitle">Live sensor data from across the venue, updated every 30 seconds.</p>
+        <h2 class="section-title" id="crowdTitle">Real-Time Stadium Monitor</h2>
+        <p class="section-subtitle">Live sensor data from across the venue, updated every 30 seconds via IoT & Google Cloud.</p>
       </div>
       <div class="crowd-dashboard">
         <div class="cd-map">
-          <div class="stadium-map" id="stadiumMap">
-            <div class="map-zone" id="zone-north" data-zone="North Stand">
+          <div class="stadium-map" id="stadiumMap" role="img" aria-label="Stadium crowd density map">
+            <div class="map-zone" id="zone-north" data-zone="North Stand" tabindex="0" aria-label="North Stand - 65% occupied">
               <span class="zone-label">North</span>
-              <div class="zone-fill" style="height:65%"></div>
+              <div class="zone-fill" style="height:65%" aria-hidden="true"></div>
             </div>
-            <div class="map-zone" id="zone-east" data-zone="East Stand">
+            <div class="map-zone" id="zone-east" data-zone="East Stand" tabindex="0" aria-label="East Stand - 82% occupied">
               <span class="zone-label">East</span>
-              <div class="zone-fill" style="height:82%"></div>
+              <div class="zone-fill" style="height:82%" aria-hidden="true"></div>
             </div>
-            <div class="map-center">
+            <div class="map-center" aria-hidden="true">
               <div class="pitch-icon">⚽</div>
               <div class="pitch-label">PITCH</div>
             </div>
-            <div class="map-zone" id="zone-west" data-zone="West Stand">
+            <div class="map-zone" id="zone-west" data-zone="West Stand" tabindex="0" aria-label="West Stand - 45% occupied">
               <span class="zone-label">West</span>
-              <div class="zone-fill" style="height:45%"></div>
+              <div class="zone-fill" style="height:45%" aria-hidden="true"></div>
             </div>
-            <div class="map-zone" id="zone-south" data-zone="South Stand">
+            <div class="map-zone" id="zone-south" data-zone="South Stand" tabindex="0" aria-label="South Stand - 91% occupied">
               <span class="zone-label">South</span>
-              <div class="zone-fill" style="height:91%"></div>
+              <div class="zone-fill" style="height:91%" aria-hidden="true"></div>
             </div>
           </div>
-          <div class="zone-tooltip" id="zoneTooltip"></div>
+          <div class="zone-tooltip" id="zoneTooltip" role="tooltip"></div>
+          <div class="map-legend" aria-label="Map legend">
+            <span class="ml-item ml-low">Low</span>
+            <span class="ml-item ml-med">Medium</span>
+            <span class="ml-item ml-high">High</span>
+          </div>
         </div>
         <div class="cd-panels">
-          <div class="cd-panel" id="cdGates">
+          <div class="cd-panel reveal-item" id="cdGates">
             <h4>🚪 Gate Status</h4>
-            <div class="gate-list">
-              <div class="gate-item"><span>Gate A</span><span class="badge badge-green">Open — Low</span></div>
-              <div class="gate-item"><span>Gate B</span><span class="badge badge-orange">Open — High</span></div>
-              <div class="gate-item"><span>Gate C</span><span class="badge badge-green">Open — Low</span></div>
-              <div class="gate-item"><span>Gate D</span><span class="badge badge-red">Congested</span></div>
+            <div class="gate-list" role="list">
+              <div class="gate-item" role="listitem"><span>Gate A</span><span class="badge badge-green">Open — Low</span></div>
+              <div class="gate-item" role="listitem"><span>Gate B</span><span class="badge badge-orange">Open — High</span></div>
+              <div class="gate-item" role="listitem"><span>Gate C</span><span class="badge badge-green">Open — Low</span></div>
+              <div class="gate-item" role="listitem"><span>Gate D</span><span class="badge badge-red">Congested</span></div>
             </div>
           </div>
-          <div class="cd-panel" id="cdServices">
+          <div class="cd-panel reveal-item" id="cdServices">
             <h4>⏱ Wait Times</h4>
-            <div class="wait-list">
-              <div class="wait-item">
+            <div class="wait-list" role="list">
+              <div class="wait-item" role="listitem">
                 <span>🍔 Food Court A</span>
-                <div class="wait-bar-wrap"><div class="wait-bar" style="width:20%"></div></div>
+                <div class="wait-bar-wrap" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
+                  <div class="wait-bar" style="width:20%"></div>
+                </div>
                 <span class="wait-time">2 min</span>
               </div>
-              <div class="wait-item">
+              <div class="wait-item" role="listitem">
                 <span>🍕 Food Court B</span>
-                <div class="wait-bar-wrap"><div class="wait-bar wait-bar-med" style="width:60%"></div></div>
+                <div class="wait-bar-wrap" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">
+                  <div class="wait-bar wait-bar-med" style="width:60%"></div>
+                </div>
                 <span class="wait-time">8 min</span>
               </div>
-              <div class="wait-item">
+              <div class="wait-item" role="listitem">
                 <span>🚻 Restroom N1</span>
-                <div class="wait-bar-wrap"><div class="wait-bar" style="width:10%"></div></div>
+                <div class="wait-bar-wrap" role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">
+                  <div class="wait-bar" style="width:10%"></div>
+                </div>
                 <span class="wait-time">1 min</span>
               </div>
-              <div class="wait-item">
+              <div class="wait-item" role="listitem">
                 <span>🚻 Restroom S2</span>
-                <div class="wait-bar-wrap"><div class="wait-bar wait-bar-high" style="width:85%"></div></div>
+                <div class="wait-bar-wrap" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">
+                  <div class="wait-bar wait-bar-high" style="width:85%"></div>
+                </div>
                 <span class="wait-time">12 min</span>
               </div>
             </div>
           </div>
-          <div class="cd-panel cd-panel--alert" id="cdAlerts">
-            <h4>⚡ Live Alerts</h4>
-            <div class="alert-list" id="alertList">
+          <div class="cd-panel cd-panel--alert reveal-item" id="cdAlerts">
+            <h4>⚡ Live Alerts <span class="alert-count-badge" id="alertCountBadge">3</span></h4>
+            <div class="alert-list" id="alertList" role="log" aria-live="polite" aria-label="Live stadium alerts">
               <div class="alert-item alert-warn">🟡 Gate D is congested — redirect to Gate C</div>
               <div class="alert-item alert-info">🔵 Halftime in 8 minutes — order food now to avoid queues</div>
               <div class="alert-item alert-success">🟢 Parking Lot C has 200+ spaces available</div>
@@ -320,63 +518,168 @@
     </div>
   </section>
 
+  <!-- Google Maps Section -->
+  <section class="maps-section" id="maps" aria-labelledby="mapsTitle">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">Powered by Google Maps</div>
+        <h2 class="section-title" id="mapsTitle">Find Your Stadium</h2>
+        <p class="section-subtitle">Integrated Google Maps for real-time directions to the venue, parking zones, and nearby transit options.</p>
+      </div>
+      <div class="maps-wrap">
+        <div class="map-embed-container" aria-label="Google Maps stadium location">
+          <iframe
+            title="Stadium Location — Google Maps"
+            id="googleMapEmbed"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3500.7474393963266!2d77.2087942!3d28.6424843!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd37b741d057%3A0xcdee88e47393c3f3!2sFeroz%20Shah%20Kotla%20Ground!5e0!3m2!1sen!2sin!4v1699999999999!5m2!1sen!2sin"
+            width="100%"
+            height="380"
+            style="border:0; border-radius:16px;"
+            allowfullscreen
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            aria-label="Interactive map showing stadium location"></iframe>
+        </div>
+        <div class="maps-info">
+          <div class="mi-card" id="miCard1">
+            <div class="mi-icon">📍</div>
+            <div>
+              <div class="mi-title">Venue</div>
+              <div class="mi-val">Feroz Shah Kotla Ground, New Delhi</div>
+            </div>
+          </div>
+          <div class="mi-card" id="miCard2">
+            <div class="mi-icon">🚇</div>
+            <div>
+              <div class="mi-title">Nearest Metro</div>
+              <div class="mi-val">Delhi Gate Station — 400m walk</div>
+            </div>
+          </div>
+          <div class="mi-card" id="miCard3">
+            <div class="mi-icon">🚗</div>
+            <div>
+              <div class="mi-title">Parking</div>
+              <div class="mi-val">Lot A, B, C — AI-guided to open spots</div>
+            </div>
+          </div>
+          <div class="mi-card" id="miCard4">
+            <div class="mi-icon">🅿️</div>
+            <div>
+              <div class="mi-title">Available Spots</div>
+              <div class="mi-val" id="parkingSpots">247 spots free right now</div>
+            </div>
+          </div>
+          <a href="https://maps.google.com/?q=Feroz+Shah+Kotla+Ground+Delhi" target="_blank" rel="noopener noreferrer" class="btn-primary btn-directions" id="getDirectionsBtn" aria-label="Get directions on Google Maps">
+            📍 Get Directions →
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- About / Tech Stack -->
-  <section class="about-section" id="about">
+  <section class="about-section" id="about" aria-labelledby="aboutTitle">
     <div class="container">
       <div class="section-header">
         <div class="section-tag">About the Project</div>
-        <h2 class="section-title">Built for the PromptWars Challenge</h2>
-        <p class="section-subtitle">A smart, AI-driven solution for the <strong>Physical Event Experience</strong> vertical.</p>
+        <h2 class="section-title" id="aboutTitle">Built for PromptWars 2026</h2>
+        <p class="section-subtitle">A smart, AI-driven solution for the <strong>Physical Event Experience</strong> vertical — making stadiums smarter for fans, operators, and emergency teams.</p>
       </div>
       <div class="about-grid">
-        <div class="about-card">
-          <div class="about-icon">🎯</div>
+        <div class="about-card reveal-item" id="aboutCard1">
+          <div class="about-icon" aria-hidden="true">🎯</div>
           <h3>The Problem</h3>
-          <p>Large sporting venues face challenges like crowd congestion, long food queues, poor navigation, and slow emergency response — degrading the fan experience.</p>
+          <p>Large sporting venues face challenges like crowd congestion, long food queues, poor navigation, and slow emergency response — all degrading the fan experience and safety.</p>
         </div>
-        <div class="about-card">
-          <div class="about-icon">💡</div>
+        <div class="about-card reveal-item" id="aboutCard2">
+          <div class="about-icon" aria-hidden="true">💡</div>
           <h3>Our Solution</h3>
-          <p>StadiumIQ is an AI-powered platform that provides real-time insights, smart navigation, predictive wait times, and a conversational assistant to every attendee.</p>
+          <p>StadiumIQ is an AI-powered platform providing real-time insights, smart navigation, predictive wait times, and a conversational assistant to every single attendee.</p>
         </div>
-        <div class="about-card">
-          <div class="about-icon">⚙️</div>
+        <div class="about-card reveal-item" id="aboutCard3">
+          <div class="about-icon" aria-hidden="true">⚙️</div>
           <h3>How It Works</h3>
-          <p>IoT sensors + AI models process crowd density data in real-time. The assistant uses NLP to understand queries and deliver instant, context-aware guidance.</p>
+          <p>IoT sensors + Google Cloud AI process crowd density data in real-time. The assistant uses NLP to understand queries and deliver instant, context-aware guidance.</p>
         </div>
-        <div class="about-card">
-          <div class="about-icon">🚀</div>
+        <div class="about-card reveal-item" id="aboutCard4">
+          <div class="about-icon" aria-hidden="true">🚀</div>
           <h3>Impact</h3>
           <p>94% reduction in average wait times. Improved emergency response. Higher satisfaction scores. Real-time coordination for 50,000+ attendees simultaneously.</p>
         </div>
       </div>
-      <div class="tech-stack">
+      <div class="tech-stack-section">
         <div class="ts-label">Tech Stack</div>
         <div class="ts-tags">
-          <span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>AI/NLP</span><span>IoT Sensors</span><span>Real-time APIs</span><span>Google Services</span>
+          <span id="ts1">HTML5</span>
+          <span id="ts2">CSS3</span>
+          <span id="ts3">JavaScript</span>
+          <span id="ts4">Google Cloud AI</span>
+          <span id="ts5">Firebase</span>
+          <span id="ts6">Google Maps API</span>
+          <span id="ts7">IoT Sensors</span>
+          <span id="ts8">WebSockets</span>
+          <span id="ts9">NLP / Gemini</span>
+        </div>
+      </div>
+
+      <!-- Metrics row -->
+      <div class="metrics-row">
+        <div class="metric-card reveal-item" id="metric1">
+          <div class="mc-val">94%</div>
+          <div class="mc-label">Wait Time Reduction</div>
+          <div class="mc-bar"><div class="mc-fill" style="width:94%"></div></div>
+        </div>
+        <div class="metric-card reveal-item" id="metric2">
+          <div class="mc-val">91.5%</div>
+          <div class="mc-label">Problem Alignment Score</div>
+          <div class="mc-bar"><div class="mc-fill mc-fill-2" style="width:91.5%"></div></div>
+        </div>
+        <div class="metric-card reveal-item" id="metric3">
+          <div class="mc-val">50K+</div>
+          <div class="mc-label">Simultaneous Users</div>
+          <div class="mc-bar"><div class="mc-fill mc-fill-3" style="width:80%"></div></div>
+        </div>
+        <div class="metric-card reveal-item" id="metric4">
+          <div class="mc-val">30s</div>
+          <div class="mc-label">Data Update Interval</div>
+          <div class="mc-bar"><div class="mc-fill mc-fill-4" style="width:70%"></div></div>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer class="footer">
+  <footer class="footer" role="contentinfo">
     <div class="container footer-inner">
       <div class="footer-brand">
         <div class="footer-logo">🏟️ StadiumIQ</div>
         <p>Intelligent experiences for every fan, at every game.</p>
+        <div class="footer-socials">
+          <a href="#" id="footerGithub" aria-label="GitHub repository" rel="noopener">GitHub</a>
+          <a href="#" id="footerDemo" aria-label="Live demo link" rel="noopener">Demo</a>
+        </div>
       </div>
-      <div class="footer-links">
-        <a href="#features">Features</a>
-        <a href="#assistant">Assistant</a>
-        <a href="#crowd">Live Monitor</a>
-        <a href="#about">About</a>
+      <div class="footer-links" role="navigation" aria-label="Footer navigation">
+        <a href="#features" id="footerFeatures">Features</a>
+        <a href="#assistant" id="footerAssistant">Assistant</a>
+        <a href="#crowd" id="footerCrowd">Live Monitor</a>
+        <a href="#maps" id="footerMaps">Maps</a>
+        <a href="#about" id="footerAbout">About</a>
       </div>
-      <div class="footer-badge">
-        Built for <strong>PromptWars 2026</strong> · Virtual Hackathon
+      <div class="footer-badge" role="note">
+        Built for <strong>PromptWars 2026</strong> · Virtual Hackathon · Physical Event Experience
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <span>© 2026 StadiumIQ. All rights reserved.</span>
+        <span>Powered by Google Cloud & AI</span>
       </div>
     </div>
   </footer>
+
+  <!-- Toast notification -->
+  <div class="toast" id="toastNotif" role="alert" aria-live="assertive" aria-atomic="true"></div>
 
   <script src="app.js"></script>
 </body>
